@@ -8,12 +8,15 @@ public class open_vindow : MonoBehaviour
     float clicktime = 0;
     float clickdelay = 0.5f;
     private Animator anime;
+    private Animator anime2;
     public GameObject open;
     private SpriteRenderer sprite;
+    
 
     private void Start()
     {
         anime = gameObject.GetComponent<Animator>();
+        anime2 = open.GetComponent<Animator>();
         sprite = open.GetComponent<SpriteRenderer>();
     }
 
@@ -25,7 +28,7 @@ public class open_vindow : MonoBehaviour
 
              RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
              if (hit.collider?.gameObject.name == "ship_icon") { //check to see what object it is
-                Debug.Log(hit.collider.gameObject.name);
+                //Debug.Log(hit.collider.gameObject.name);
                 anime.Play("base layer.ship_selected", 0, 0.25f);
                     clicked++;
                     if (clicked == 1) clicktime = Time.time;
@@ -33,8 +36,9 @@ public class open_vindow : MonoBehaviour
                     {
                         clicked = 0;
                         clicktime = 0;
-                        Debug.Log("Double CLick!");
+                        //Debug.Log("Double CLick!");
                         sprite.enabled = true;
+                        anime2.Play("Base Layer.open_vindow", 0, 0.25f);
                     }
                     else if (clicked > 2 || Time.time - clicktime > 1)
                     clicked = 0;
