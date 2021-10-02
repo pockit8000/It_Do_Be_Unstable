@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 370.009
+margin_top = 367.979
+margin_right = 470.009
+margin_bottom = 381.979
+rect_scale = Vector2( 12.8096, 30.3405 )
+text = "This Be a folder"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 964.64, 539.896 )

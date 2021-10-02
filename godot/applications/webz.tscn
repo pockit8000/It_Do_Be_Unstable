@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 964.64, 539.896 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 17.2245
+margin_top = 334.121
+margin_right = 164.224
+margin_bottom = 348.121
+rect_scale = Vector2( 12.8096, 30.3405 )
+text = "This Be THE InterWEBZ"
+__meta__ = {
+"_edit_use_anchors_": false
+}

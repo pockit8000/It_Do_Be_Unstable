@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dont_care.wav-dfd92572afbabe3452c42d6aa78fa2f3.sample"
+
+[deps]
+
+source_file="res://assets/audio/dont_care.wav"
+dest_files=[ "res://.import/dont_care.wav-dfd92572afbabe3452c42d6aa78fa2f3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
