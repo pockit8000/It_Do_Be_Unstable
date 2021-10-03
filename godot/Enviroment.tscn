@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://assets/base_enviroment.png" type="Texture" id=1]
 [ext_resource path="res://expanding.png" type="Texture" id=2]
@@ -9,11 +9,24 @@
 [ext_resource path="res://assets/folder_icon.png" type="Texture" id=7]
 [ext_resource path="res://assets/bin_icon_clicked.png" type="Texture" id=8]
 [ext_resource path="res://assets/web_icon.png" type="Texture" id=9]
-[ext_resource path="res://separator.png" type="Texture" id=10]
-[ext_resource path="res://ball.png" type="Texture" id=11]
-[ext_resource path="res://pong/pong.gd" type="Script" id=12]
-[ext_resource path="res://right_pallete.png" type="Texture" id=13]
-[ext_resource path="res://left_pallete.png" type="Texture" id=14]
+[ext_resource path="res://assets/maximize.png" type="Texture" id=10]
+[ext_resource path="res://assets/top_app_abr.png" type="Texture" id=11]
+[ext_resource path="res://assets/close.png" type="Texture" id=12]
+[ext_resource path="res://assets/maximize_clicked.png" type="Texture" id=13]
+[ext_resource path="res://assets/close_clicked.png" type="Texture" id=14]
+[ext_resource path="res://assets/minimize_clicked.png" type="Texture" id=15]
+[ext_resource path="res://assets/minimize.png" type="Texture" id=16]
+[ext_resource path="res://assets/space.png" type="Texture" id=17]
+[ext_resource path="res://assets/logo_big.png" type="Texture" id=18]
+[ext_resource path="res://assets/audio/booting.wav" type="AudioStream" id=19]
+[ext_resource path="res://assets/boot_bg.png" type="Texture" id=20]
+[ext_resource path="res://assets/start_button.png" type="Texture" id=21]
+[ext_resource path="res://assets/start_button_clicked.png" type="Texture" id=22]
+[ext_resource path="res://assets/menu_logoff.png" type="Texture" id=23]
+[ext_resource path="res://assets/menu.png" type="Texture" id=24]
+[ext_resource path="res://assets/menu_internet.png" type="Texture" id=25]
+[ext_resource path="res://assets/menu_internet_clicked.png" type="Texture" id=26]
+[ext_resource path="res://assets/menu_logoff_clicked.png" type="Texture" id=27]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -53,7 +66,89 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Enviroment" type="Node"]
+[sub_resource type="Animation" id=8]
+resource_name = "Boot"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("boot_bg/logo_big:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 962.578, 315.04 ), Vector2( 960.896, 782.579 ), Vector2( 292.633, 301.203 ), Vector2( 1570.64, 254.009 ), Vector2( 930.386, 505.692 ) ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("boot_bg/logo_big:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 360, -0.25, 0, 0.25, 0, 180, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2, 4, 5 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AudioStreamPlayer:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("boot_bg/logo_big:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 255, -0.25, 0, 0.25, 0, 255, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5, 5.9 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("boot_bg:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 255, -0.25, 0, 0.25, 0, 39.5071, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 5, 6 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("boot_bg:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Enviroment" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="base_enviroment" type="Sprite" parent="."]
@@ -61,8 +156,10 @@ position = Vector2( 960, 540 )
 texture = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+margin_left = -2.31955
+margin_top = 0.591735
+margin_right = 1917.68
+margin_bottom = 1080.59
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -72,6 +169,7 @@ margin_left = 68.0357
 margin_top = 70.5556
 margin_right = 203.036
 margin_bottom = 215.556
+focus_mode = 1
 texture_normal = ExtResource( 9 )
 texture_focused = ExtResource( 5 )
 expand = true
@@ -85,6 +183,7 @@ margin_left = 58.1567
 margin_top = 256.903
 margin_right = 216.157
 margin_bottom = 401.903
+focus_mode = 1
 texture_normal = ExtResource( 7 )
 texture_focused = ExtResource( 6 )
 stretch_mode = 3
@@ -93,60 +192,188 @@ __meta__ = {
 }
 
 [node name="bin_button" type="TextureButton" parent="Control"]
-margin_left = 70.5357
-margin_top = 444.851
-margin_right = 205.536
-margin_bottom = 596.851
+margin_left = 69.2009
+margin_top = 443.516
+margin_right = 204.201
+margin_bottom = 595.516
+focus_mode = 1
 texture_normal = ExtResource( 4 )
 texture_focused = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="space_button" type="TextureButton" parent="Control"]
+margin_left = 98.3294
+margin_top = 636.138
+margin_right = 143.329
+margin_bottom = 664.138
+rect_scale = Vector2( 2, 2 )
+focus_mode = 1
+texture_normal = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="register_button" type="Button" parent="Control"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1279.49
+margin_top = 876.997
+margin_right = 1909.49
+margin_bottom = 1015.0
+focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start_button" type="TextureButton" parent="Control"]
+margin_left = -0.17202
+margin_top = 1023.4
+margin_right = 153.828
+margin_bottom = 1079.4
+focus_mode = 0
+toggle_mode = true
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opening" type="AnimatedSprite" parent="."]
 visible = false
 frames = SubResource( 7 )
 animation = "Opening"
 centered = false
 
-[node name="ViewportContainer" type="ViewportContainer" parent="."]
+[node name="ApplicationContainer" type="ViewportContainer" parent="."]
 visible = false
-margin_left = 500.435
-margin_top = 269.695
-margin_right = 540.435
-margin_bottom = 309.695
+margin_left = 539.694
+margin_top = 272.171
+margin_right = 1499.69
+margin_bottom = 812.171
+stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Viewport" type="Viewport" parent="ViewportContainer"]
-size = Vector2( 960, 540 )
+[node name="Application" type="Viewport" parent="ApplicationContainer"]
+size = Vector2( 1920, 1080 )
 handle_input_locally = false
 usage = 0
-render_target_v_flip = true
 render_target_update_mode = 0
 
-[node name="Pong" type="Node2D" parent="ViewportContainer/Viewport"]
-script = ExtResource( 12 )
-
-[node name="Background" type="Panel" parent="ViewportContainer/Viewport/Pong"]
-margin_right = 600.0
-margin_bottom = 400.0
-
-[node name="Ball" type="Sprite" parent="ViewportContainer/Viewport/Pong"]
-position = Vector2( 300, 200 )
+[node name="Bar" type="Sprite" parent="ApplicationContainer"]
+position = Vector2( 480.058, -11.1214 )
 texture = ExtResource( 11 )
 
-[node name="LeftPaddle" type="Sprite" parent="ViewportContainer/Viewport/Pong"]
-position = Vector2( 20, 200 )
-texture = ExtResource( 14 )
+[node name="MaximizeButton" type="TextureButton" parent="ApplicationContainer/Bar"]
+margin_left = 430.0
+margin_top = -10.0
+margin_right = 450.0
+margin_bottom = 10.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="RightPaddle" type="Sprite" parent="ViewportContainer/Viewport/Pong"]
-position = Vector2( 580, 200 )
-texture = ExtResource( 13 )
+[node name="MinimizeButton" type="TextureButton" parent="ApplicationContainer/Bar"]
+margin_left = 403.0
+margin_top = -10.0
+margin_right = 423.0
+margin_bottom = 10.0
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Separator" type="Sprite" parent="ViewportContainer/Viewport/Pong"]
-position = Vector2( 298, 200 )
-texture = ExtResource( 10 )
+[node name="CloseButton" type="TextureButton" parent="ApplicationContainer/Bar"]
+margin_left = 456.0
+margin_top = -10.0
+margin_right = 476.0
+margin_bottom = 10.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[node name="Icon" type="Sprite" parent="ApplicationContainer/Bar"]
+position = Vector2( -465.47, -0.244934 )
+
+[node name="Label" type="Label" parent="ApplicationContainer/Bar"]
+margin_left = -446.0
+margin_top = -7.0
+margin_right = 184.0
+margin_bottom = 7.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="boot_bg" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 255 )
+texture = ExtResource( 20 )
+centered = false
+
+[node name="logo_big" type="Sprite" parent="boot_bg"]
+modulate = Color( 1, 1, 1, 255 )
+position = Vector2( 962.578, 315.04 )
+texture = ExtResource( 18 )
+
+[node name="skip" type="Button" parent="boot_bg"]
+margin_right = 12.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Boot = SubResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+
+[node name="menu" type="Sprite" parent="."]
+visible = false
+position = Vector2( 179.569, 775.884 )
+texture = ExtResource( 24 )
+
+[node name="menu_logoff" type="TextureButton" parent="menu"]
+margin_left = -141.023
+margin_top = 202.565
+margin_right = 239.977
+margin_bottom = 250.565
+texture_normal = ExtResource( 23 )
+texture_pressed = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_internet" type="TextureButton" parent="menu"]
+margin_left = -140.655
+margin_top = -249.95
+margin_right = 179.345
+margin_bottom = -201.95
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="Control/internet_button" to="." method="_on_desktop_icon_button_mouse_entered" binds= [ "web" ]]
+[connection signal="mouse_exited" from="Control/internet_button" to="." method="_on_desktop_icon_button_mouse_exited" binds= [ "web" ]]
+[connection signal="mouse_entered" from="Control/folder_button" to="." method="_on_desktop_icon_button_mouse_entered" binds= [ "folder" ]]
+[connection signal="mouse_exited" from="Control/folder_button" to="." method="_on_desktop_icon_button_mouse_exited" binds= [ "folder" ]]
+[connection signal="mouse_entered" from="Control/bin_button" to="." method="_on_desktop_icon_button_mouse_entered" binds= [ "bin" ]]
+[connection signal="mouse_exited" from="Control/bin_button" to="." method="_on_desktop_icon_button_mouse_exited" binds= [ "bin" ]]
+[connection signal="mouse_entered" from="Control/space_button" to="." method="_on_desktop_icon_button_mouse_entered" binds= [ "space" ]]
+[connection signal="mouse_exited" from="Control/space_button" to="." method="_on_desktop_icon_button_mouse_exited" binds= [ "space" ]]
+[connection signal="pressed" from="Control/register_button" to="." method="_on_register_button_pressed"]
+[connection signal="toggled" from="Control/start_button" to="." method="_on_start_button_toggled"]
+[connection signal="animation_finished" from="Opening" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="pressed" from="ApplicationContainer/Bar/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="boot_bg/skip" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="menu/menu_logoff" to="." method="_on_menu_logoff_pressed"]
+[connection signal="pressed" from="menu/menu_internet" to="." method="open_window" binds= [ "web" ]]

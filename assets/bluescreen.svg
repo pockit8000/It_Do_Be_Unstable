@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 507.99999 285.75001"
+   version="1.1"
+   id="svg6455"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="bluescreen.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview6457"
+     pagecolor="#0000ff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="0.39685475"
+     inkscape:cx="883.19466"
+     inkscape:cy="977.68767"
+     inkscape:window-width="1920"
+     inkscape:window-height="1021"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs6452">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11944">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop11940" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop11942" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11918">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop11914" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop11916" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11918"
+       id="linearGradient11920"
+       x1="209.90342"
+       y1="69.654393"
+       x2="259.46096"
+       y2="69.654393"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11944"
+       id="linearGradient11946"
+       x1="209.90342"
+       y1="69.654393"
+       x2="259.46096"
+       y2="69.654393"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(17.805315,-5.0556059)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#858585;fill-opacity:1;stroke-width:0.180978"
+       id="rect6696"
+       width="74.258514"
+       height="19.308872"
+       x="216.87074"
+       y="54.588287" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Hack;-inkscape-font-specification:Hack;fill:#000000;fill-opacity:1;stroke:url(#linearGradient11946);stroke-width:0.264583"
+       x="226.99042"
+       y="68.451248"
+       id="text10278"><tspan
+         sodipodi:role="line"
+         id="tspan10276"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2889px;font-family:Hack;-inkscape-font-specification:Hack;fill:#000000;fill-opacity:1;stroke:url(#linearGradient11946);stroke-width:0.264583;stroke-opacity:1"
+         x="226.99042"
+         y="68.451248">Sinsnows</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.7px;line-height:1.25;font-family:Hack;-inkscape-font-specification:Hack;stroke-width:0.264583"
+       x="32.264709"
+       y="122.92821"
+       id="text20240"><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="122.92821"
+         id="tspan28704">An exception 00 has occured at DEAD:BEEF in TERAFLOP +</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="138.80321"
+         id="tspan28708">HEXAFLOP. This was called from the lack of ability to play </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="154.67821"
+         id="tspan29976">without losing. It may be possible to continue normally.</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="170.55321"
+         id="tspan29978" /><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="186.42821"
+         id="tspan29980">   * Press any key to attempt to continue.</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="202.30321"
+         id="tspan32504">   * Press Ctrl+Shift+1 to restart the game. You will lose </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="218.17821"
+         id="tspan32704">     any unsaved information in all applications.</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="234.05321"
+         id="tspan36930" /><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="249.92821"
+         id="tspan35510">                  Press any key to continue.</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="265.80319"
+         id="tspan35512" /><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="281.67819"
+         id="tspan33894" /><tspan
+         sodipodi:role="line"
+         style="font-size:12.7px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="32.264709"
+         y="297.55319"
+         id="tspan31116" /></text>
+  </g>
+</svg>
